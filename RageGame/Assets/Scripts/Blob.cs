@@ -10,6 +10,15 @@ public class Blob : MonoBehaviour
     private Vector2 spoint, epoint, offset;
     private Vector3 jumpVect;
 
+    public bool isDraging;
+
+    public Trajectory trajectory;
+
+    Vector2 endPoint;
+    Vector2 direction;
+    Vector2 force;
+    float distance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +37,9 @@ public class Blob : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             spoint = Input.mousePosition;
+
+            isDraging = true;
+            OnDragStart();
             //Debug.Log(spoint);
         }
         if(Input.GetMouseButtonUp(0))
@@ -39,8 +51,46 @@ public class Blob : MonoBehaviour
             jumpVect = new Vector3(offset.x, 100f * acc, offset.y);
 
             rb.AddForce(jumpVect * .1f, ForceMode.Impulse);
+
+            isDraging = false;
+            OnDragEnd();
+        }
+
+        if(isDraging)
+        {
+            OnDrag();
         }
 
 
     }
+
+    void OnDragStart()
+    {
+
+
+        trajectory.show();
+    }
+
+
+    void OnDrag()
+    {
+        endPoint = Input.mousePosition;
+        distance = Vector2.Distance(spoint, endPoint);
+        direction = (spoint - endPoint).normalized;
+        force = direction * distance * 0.008f ;
+
+        //just for debug
+        Debug.DrawLine(spoint, endPoint);
+
+
+        trajectory.UpdateDots(transform.position, force);
+    }
+
+    void OnDragEnd()
+    {
+
+
+        trajectory.hide();
+    }
 }
+
