@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Blob : MonoBehaviour
 {
+    private bool onGround;
     private Rigidbody rb;
     public float acc;
 
@@ -34,7 +35,7 @@ public class Blob : MonoBehaviour
             rb.AddForce(new Vector3(0f, acc * rb.mass, 0f), ForceMode.Impulse);
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && onGround)
         {
             spoint = Input.mousePosition;
 
@@ -42,7 +43,7 @@ public class Blob : MonoBehaviour
             OnDragStart();
             //Debug.Log(spoint);
         }
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && onGround)
         {
             epoint = Input.mousePosition;
 
@@ -53,6 +54,8 @@ public class Blob : MonoBehaviour
             rb.AddForce(jumpVect * .1f, ForceMode.Impulse);
 
             isDraging = false;
+            onGround = false;
+
             OnDragEnd();
         }
 
@@ -91,6 +94,14 @@ public class Blob : MonoBehaviour
 
 
         trajectory.hide();
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.CompareTag("ground"))
+        {
+            onGround = true;
+        }
     }
 }
 
