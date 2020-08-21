@@ -10,6 +10,8 @@ public class Blob : MonoBehaviour
     private Vector2 spoint, epoint, offset;
     private Vector3 jumpVect;
 
+    public bool OnGround = true;
+
     public bool isDraging;
 
     public Trajectory trajectory;
@@ -18,6 +20,7 @@ public class Blob : MonoBehaviour
     Vector2 direction;
     Vector2 force;
     float distance;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -29,20 +32,22 @@ public class Blob : MonoBehaviour
     void Update()
     {
         //test jump
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && OnGround)
         {
             rb.AddForce(new Vector3(0f, acc * rb.mass, 0f), ForceMode.Impulse);
+            OnGround = false;
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && OnGround)
         {
             spoint = Input.mousePosition;
 
             isDraging = true;
             OnDragStart();
+
             //Debug.Log(spoint);
         }
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && OnGround)
         {
             epoint = Input.mousePosition;
 
@@ -54,12 +59,18 @@ public class Blob : MonoBehaviour
 
             isDraging = false;
             OnDragEnd();
+            OnGround = false;
         }
 
         if(isDraging)
         {
             OnDrag();
         }
+        if(OnGround == false)
+        {
+            isDraging = false;
+        }
+
 
 
     }
@@ -85,6 +96,7 @@ public class Blob : MonoBehaviour
 
         trajectory.UpdateDots(transform.position, force);
     }
+    
 
     void OnDragEnd()
     {
@@ -92,5 +104,10 @@ public class Blob : MonoBehaviour
 
         trajectory.hide();
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        OnGround = true;
+    }
 }
+
 
