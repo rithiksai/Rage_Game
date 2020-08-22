@@ -2,10 +2,6 @@
 mobile rage game
 
 
-GG to y'all - fortunate
-
-
-
 
 
 
