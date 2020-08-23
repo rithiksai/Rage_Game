@@ -1316,8 +1316,6 @@ GameObject:
   - component: {fileID: 4213617743736049628}
   - component: {fileID: 4213617743736049629}
   - component: {fileID: 4213617743736049626}
-  - component: {fileID: 2753730894807083506}
-  - component: {fileID: 2753730894807083507}
   m_Layer: 0
   m_Name: FLL
   m_TagString: Untagged
@@ -1529,39 +1527,6 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2753730894807083506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4213617743736049625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5902a7a68b9bc64f9c9239522d9ff5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acc: 7
-  OnGround: 1
-  isDraging: 0
-  trajectory: {fileID: 2753730894807083507}
---- !u!114 &2753730894807083507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4213617743736049625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5236b0f2a1e3d1b4e917b4de47e222e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dotPrefab: {fileID: 2149648016502109085, guid: 81740f4a84c358b41a397ea70df048a4,
-    type: 3}
-  dotsParent: {fileID: 976655580}
-  dotSpacing: 0.1
-  dotsNumber: 15
 --- !u!1 &6681741474068183577
 GameObject:
   m_ObjectHideFlags: 0
