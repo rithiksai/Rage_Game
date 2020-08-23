@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1871eed8c5cf2324282da71a71868232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1529213941}
+  target: {fileID: 2069729371}
   smoothSpeed: 0.05
   offset: {x: 0, y: 6, z: -14}
 --- !u!1 &179951849 stripped
@@ -1655,12 +1655,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba136590576cc4a4db3538f1b62ac187, type: 3}
---- !u!4 &1529213941 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5286152762109136831, guid: eede3d671f28b5b4c963725a99f84a6d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1687920183}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1567905393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: softBlob
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593485289726212727, guid: eede3d671f28b5b4c963725a99f84a6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3760844666938645664, guid: eede3d671f28b5b4c963725a99f84a6d,
         type: 3}
@@ -3542,7 +3541,6 @@ GameObject:
   - component: {fileID: 2014177351}
   - component: {fileID: 2014177350}
   - component: {fileID: 2014177349}
-  - component: {fileID: 2014177348}
   m_Layer: 0
   m_Name: VoidBarrier
   m_TagString: dead
@@ -3550,18 +3548,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2014177348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014177347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b48b5537a744bd0a02c882f6525c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2014177349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3750,6 +3736,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &2069729371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2442755922098512754, guid: 071f304d62c637c438900872d19f1dd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5321345072958370044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086657568
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,7 +4013,7 @@ PrefabInstance:
     - target: {fileID: 3075317793199602120, guid: 071f304d62c637c438900872d19f1dd9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3075317793199602122, guid: 071f304d62c637c438900872d19f1dd9,
         type: 3}

@@ -11,6 +11,6 @@ public class youded : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "dead")
-            SceneManager.LoadScene("Map 1");
+            SceneManager.LoadScene("Map1");
     }
 }
