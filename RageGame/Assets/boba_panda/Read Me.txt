@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Boba Panda © 7NTypes. 2020. All Rights Reserved | Designed by Dreamink; Dani; Situjuh Nazara
 
 License
@@ -13,4 +14,5 @@ https://7ntypes.com
 
 ---------------------------------------------------------
 PLEASE, DO NOT SHARE THIS FONT WITHOUT 7NTYPES PERMISSION
+>>>>>>> 7df2221460961bdcc1823a56d12ca5efb0b61da7
 ---------------------------------------------------------
