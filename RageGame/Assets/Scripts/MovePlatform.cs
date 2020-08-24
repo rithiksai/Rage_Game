@@ -29,4 +29,12 @@ public class MovePlatform : MonoBehaviour
         Vector3 offset = movementFactor * movementVector;
         transform.position = startingPos + offset;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        other.transform.parent = transform;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        other.transform.parent = null;
+    }
 }
