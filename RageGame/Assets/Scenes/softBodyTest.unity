@@ -264,7 +264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30bfdd2fcdb402c4a89c8277db344a7b, type: 2}
+  - {fileID: 2100000, guid: 8e4d8962c378771499f1095582b0f46a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -837,7 +837,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.106185675, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.23113209, g: 0.80287117, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -854,7 +854,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -878,7 +878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036920417}
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 8.18, z: -11.92}
+  m_LocalPosition: {x: 0, y: 9, z: -11.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -928,8 +928,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 276055995}
-  smoothSpeed: 0.125
-  offset: {x: 0, y: 5, z: -14}
+  smoothSpeed: 0.05
+  offset: {x: 0, y: 6, z: -14}
 --- !u!1001 &2039832301920396849
 PrefabInstance:
   m_ObjectHideFlags: 0
