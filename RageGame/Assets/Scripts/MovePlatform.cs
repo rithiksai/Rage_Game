@@ -38,3 +38,4 @@ public class MovePlatform : MonoBehaviour
         other.transform.parent = null;
     }
 }
+
