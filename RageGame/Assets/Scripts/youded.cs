@@ -4,17 +4,13 @@ using UnityEngine.SceneManagement;
 public class youded : MonoBehaviour
 {
 
+    public Transform teleportTarget;
 
+    public GameObject player;
 
-
-    // OnCollisionEnter2D is called when this collider2D/rigidbody2D has begun touching another rigidbody2D/collider2D (2D physics only)
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "dead")
-        {
-            Debug.Log("Hai");
+        player.transform.position = teleportTarget.transform.position;
 
-            SceneManager.LoadScene("newmap");
-        }
     }
 }

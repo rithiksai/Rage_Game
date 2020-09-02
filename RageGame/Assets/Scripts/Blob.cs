@@ -21,8 +21,15 @@ public class Blob : MonoBehaviour
     Vector2 direction;
     Vector2 force;
     float distance;
-    
 
+    SavePlayerPos playerPosData;
+
+    private void Awake()
+    {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+
+        playerPosData.PlayerPosLoad();
+    }
     // Start is called before the first frame update
     void Start()
     {
