@@ -21,6 +21,7 @@ public class Blob : MonoBehaviour
     Vector2 direction;
     Vector2 force;
     float distance;
+    
 
     SavePlayerPos playerPosData;
 

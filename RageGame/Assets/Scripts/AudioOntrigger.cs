@@ -17,7 +17,7 @@ public class AudioOntrigger : MonoBehaviour
 
             VoiceOverThing.Play(); soundHasPlayed = true;
 
-            Debug.Log("Hey");
+        
 
 
 
