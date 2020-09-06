@@ -17,9 +17,18 @@ public class AudioOntrigger : MonoBehaviour
 
             VoiceOverThing.Play(); soundHasPlayed = true;
 
+            Debug.Log("Hey");
 
 
 
+
+            if (!(soundHasPlayed = true)) {
+
+
+                Debug.Log("Klaar");
+
+            }
+        }
 
 
         }
@@ -28,4 +37,4 @@ public class AudioOntrigger : MonoBehaviour
 
     // Update is called once per frame
 
-}
+
