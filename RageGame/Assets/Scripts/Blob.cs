@@ -125,6 +125,14 @@ public class Blob : MonoBehaviour
     {
         OnGround = true;
     }
+    public void PauseStop()
+    {
+        gameObject.SetActive(false);
+    }
+    public void PauseResume()
+    {
+        gameObject.SetActive(true);
+    }
 }
 
 
