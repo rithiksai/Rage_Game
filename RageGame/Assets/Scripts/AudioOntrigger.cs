@@ -15,9 +15,9 @@ public class AudioOntrigger : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(VoiceOverClip);
 
-            VoiceOverThing.Play(); soundHasPlayed = true;
+            VoiceOverThinsg.Play(); soundHasPlayed = true;
 
-        
+            Debug.Log("Hey");
 
 
 
